@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+  <title>Delete tag</title>
+{% endblock %}
+
+{% block content %}
+  <h1>Delete {{ tag }}</h1>
+  <hr>
+  <form action="" method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <h2>Are you sure?</h2>
+    <input type="submit" value="Yes" class="btn btn-danger">
+    <a href="{% url 'todo:tag-list' %}" class="btn btn-success">No, go back</a>
+  </form>
+{% endblock %}
