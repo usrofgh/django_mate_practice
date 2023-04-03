@@ -17,3 +17,4 @@ class Task(models.Model):
 
     class Meta:
         default_related_name = "tasks"
+        ordering = ["is_done", "datetime"]
