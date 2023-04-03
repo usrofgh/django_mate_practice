@@ -7,6 +7,9 @@ class Tag(models.Model):
     class Meta:
         default_related_name = "tags"
 
+    def __str__(self) -> str:
+        return self.name
+
 
 class Task(models.Model):
     content = models.TextField()
