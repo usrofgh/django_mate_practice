@@ -1,3 +1,5 @@
+from django.http import HttpResponse
+from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views import generic
 
@@ -44,3 +46,10 @@ class TagCreateView(generic.CreateView):
 class TagDeleteView(generic.DeleteView):
     model = Tag
     success_url = reverse_lazy("todo:tag-list")
+
+
+def toggle_complete_task(request, pk):
+    task = Task.objects.get(id=pk)
+    task.is_done = not task.is_done
+    task.save()
+    return redirect(request.META.get("HTTP_REFERER"))
