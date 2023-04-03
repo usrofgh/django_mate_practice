@@ -71,3 +71,13 @@ textarea {
     max-height: 150px;
     resize: none;
 }
+
+.inline-block {
+    display: inline-block;
+}
+
+.float-right {
+    float: right;
+    margin-right: 50px;
+    margin-top: 5px;
+}
