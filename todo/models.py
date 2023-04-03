@@ -21,3 +21,6 @@ class Task(models.Model):
     class Meta:
         default_related_name = "tasks"
         ordering = ["is_done", "deadline"]
+
+    def __str__(self) -> str:
+        return self.content
