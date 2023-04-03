@@ -8,6 +8,7 @@ from todo.models import Task, Tag
 
 class TaskListView(generic.ListView):
     model = Task
+    queryset = Task.objects.prefetch_related("tags")
 
 
 class TaskUpdateView(generic.UpdateView):
