@@ -13,3 +13,61 @@
 table {
     text-align: center;
 }
+
+body {
+    background-color: #131516;
+    color: rgb(213, 209, 203);
+}
+.side-nav {
+    background-color: #131516;
+}
+
+.list-group-item {
+    color: rgb(213, 209, 203);
+    text-decoration-color: initial;
+    background-color: rgb(19, 21, 22);
+    border-color: rgba(141, 130, 114, 0.13);
+}
+
+.list-group-item:hover {
+    background-color: rgb(38 42 44);
+    color: rgb(213, 209, 203);
+}
+
+.table {
+    --darkreader-bg--bs-table-bg: rgba(0, 0, 0, 0);
+    --darkreader-bg--bs-table-accent-bg: rgba(0, 0, 0, 0);
+    --darkreader-text--bs-table-striped-color: #d5d1cb;
+    --darkreader-bg--bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+    --darkreader-text--bs-table-active-color: #d5d1cb;
+    --darkreader-bg--bs-table-active-bg: rgba(0, 0, 0, 0.1);
+    --darkreader-text--bs-table-hover-color: #d5d1cb;
+    --darkreader-bg--bs-table-hover-bg: rgba(0, 0, 0, 0.07);
+    color: rgb(213, 209, 203);
+    border-color: rgb(52, 58, 60);
+}
+
+.form-control {
+    color: rgb(213, 209, 203);
+    background-color: rgb(19, 21, 22);
+    border-color: rgb(57, 62, 65);
+}
+
+.form-control:focus {
+    color: rgb(213, 209, 203);
+    background-color: rgb(19, 21, 22);
+    border-color: rgb(0, 53, 137);
+    outline-color: initial;
+    box-shadow: rgba(0, 78, 199, 0.25) 0px 0px 0px 0.25rem;
+}
+
+.form-select {
+    color: rgb(213, 209, 203);
+    background-color: rgb(19, 21, 22);
+    border-color: rgb(57, 62, 65);
+}
+
+textarea {
+    max-height: 150px;
+    resize: none;
+}
