@@ -27,7 +27,7 @@
       {% for tag in task.tags.all %}
         {{ tag }}{% if not forloop.last %},{% endif %}
       {% endfor %}
-        <a href="#" class="text-decoration-none">Update</a>
+        <a href="{% url 'todo:task-update' pk=task.id %}" class="text-decoration-none">Update</a>
         <a href="#" class="text-decoration-none">Delete</a>
       </p>
       <hr>
