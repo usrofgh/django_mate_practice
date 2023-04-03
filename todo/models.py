@@ -1,3 +1,19 @@
 from django.db import models
 
-# Create your models here.
+
+class Tag(models.Model):
+    name = models.CharField(max_length=255)
+
+    class Meta:
+        default_related_name = "tags"
+
+
+class Task(models.Model):
+    content = models.TextField()
+    datetime = models.DateTimeField(auto_now_add=True)
+    optional = models.DateTimeField(null=True)
+    is_done = models.BooleanField()
+    tags = models.ManyToManyField(to=Tag)
+
+    class Meta:
+        default_related_name = "tasks"
