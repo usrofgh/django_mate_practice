@@ -6,7 +6,7 @@
 
 {% block content %}
   <h1>Tag list</h1>
-  <a href="#" class="btn btn-primary">Add Tag</a>
+  <a href="{% url 'todo:tag-create' %}" class="btn btn-primary">Add Tag</a>
   <hr>
   <div class="tasks">
   <table class="table">
