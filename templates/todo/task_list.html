@@ -5,5 +5,33 @@
 {% endblock %}
 
 {% block content %}
-  <h1>test</h1>
+  <h1>TODO list</h1>
+  <a href="#" class="btn btn-primary">Add Task</a>
+  <hr>
+  <div class="tasks">
+    {% for task in task_list %}
+      <p>
+        <strong>{{ task }}</strong>
+        {% if task.is_done %}
+          <span class="text-success">Done</span>
+          <a href="#" class="btn btn-secondary">Undo</a>
+        {% else %}
+          <span class="text-danger">Not Done</span>
+          <a href="#" class="btn btn-success">Complete</a>
+        {% endif %}
+      </p>
+      <p><strong>Created: </strong>{{ task.created_at }}</p>
+      <p><strong>Deadline: </strong><span class="text-danger">{{ task.deadline }}</span></p>
+      <p>
+      Tags:
+      {% for tag in task.tags.all %}
+        {{ tag }}{% if not forloop.last %},{% endif %}
+      {% endfor %}
+        <a href="#" class="text-decoration-none">Update</a>
+        <a href="#" class="text-decoration-none">Delete</a>
+      </p>
+      <hr>
+    {% endfor %}
+  </div>
+
 {% endblock %}
