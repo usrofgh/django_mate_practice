@@ -22,4 +22,5 @@ from app import settings
 urlpatterns = [
     path("__debug__/", include("debug_toolbar.urls")),
     path("admin/", admin.site.urls),
+    path("", include("todo.urls", namespace="todo")),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
